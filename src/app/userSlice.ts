@@ -41,7 +41,7 @@ const filtersReducer: CaseReducer<
     user[action.payload.key as keyof User]
       .toString()
       .toLocaleLowerCase()
-      .includes(action.payload.value)
+      .includes(action.payload.value.toLocaleLowerCase())
   );
 
   return state;

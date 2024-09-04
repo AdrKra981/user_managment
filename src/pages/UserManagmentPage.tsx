@@ -23,8 +23,14 @@ const UserManagmentPage = () => {
   return (
     <div className="w-screen bg-orange-100 flex flex-col items-center ">
       <h2 className="text-3xl font-mono text-gray-500">User managment</h2>
-      <FilterBar filters={filters} />
-      <UserTable data={filteredUsers || []} />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          <FilterBar filters={filters} />
+          <UserTable data={filteredUsers || []} />
+        </>
+      )}
     </div>
   );
 };
