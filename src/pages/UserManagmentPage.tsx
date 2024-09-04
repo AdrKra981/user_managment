@@ -16,10 +16,6 @@ const UserManagmentPage = () => {
     dispatch(fetchUsers());
   }, []);
 
-  if (loading) {
-    return <Spinner />;
-  }
-
   return (
     <div className="w-screen bg-orange-100 flex flex-col items-center ">
       <h2 className="text-3xl font-mono text-gray-500">User managment</h2>
