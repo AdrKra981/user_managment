@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Spinner = (props: Props) => {
+const Spinner = () => {
   return (
     <div className="w-screen h-screen justify-center items-center">
       <div
